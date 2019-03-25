@@ -1,0 +1,129 @@
+.main-container{
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product-item-container{
+    background: #d0d0c1;
+    width: 250px;
+    height: 450px;
+    margin: 20px;
+}
+.product-item-interior-container{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: relative;
+    margin: 20px;
+    margin-bottom: 10px;
+    min-height: 80%;
+}
+.product-item{
+    margin: 30px;
+    text-align: center;
+}
+.product-item-image .image{
+    width: 100%;
+    height: 50%;
+}
+.product-item-name{
+    opacity: 0.3;
+    text-transform: uppercase;
+}
+.product-item-new-price{
+    color: red;
+}
+.product-item-old-price{
+    text-decoration: line-through;
+}
+p{
+    margin: 5px;
+}
+.product-item-interior-container.new .product-item-content{
+    margin-top: 40px;
+}
+.product-item-interior-container.new::before{
+    content: 'New';
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    background: blue;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+.product-item-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-item-btn button{
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: none;
+    background-color: #98bbef;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+.product-item-btn button:hover{
+    background-color:#98bbbb;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+}
+
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:100%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
